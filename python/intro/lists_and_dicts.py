@@ -7,6 +7,7 @@
 # Definition:
 
 list = ['red','blue','green'] # indices 0, 1, 2
+#         0     1        2
 
 dict = {
     'color1': 'red',
