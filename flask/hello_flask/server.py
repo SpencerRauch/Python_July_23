@@ -23,3 +23,6 @@ def show_temp():
 
 if __name__=="__main__":   # Ensure this file is being run directly and not from a different module    
     app.run(debug=True,port=5050,host="0.0.0.0")    # Run the app in debug mode
+    #port number only needs to be specified if 5000 is in use.
+    #host="0.0.0.0" broadcasts our app on all available ips, used to serve your app on your local router
+    #   (not typical, but useful for testing on other devices)
