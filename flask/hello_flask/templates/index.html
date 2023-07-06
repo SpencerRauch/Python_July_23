@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    {#body{
+
+        background-color: {{color}};
+    }#}
+    </style>
 </head>
 <body>
     <h1>Now we're serving templates!</h1>
+    <p>{{string}}</p>
+    {% for i in range(num)%}
+    <p>{{i+1}}. This came from my loop</p>
+    {% if i == 1 %}
+    <p>That was the second iteration of my loop</p>
+    {% else %}
+    <p>this wasn't the second</p>
+    {% endif %}
+    {% endfor %}
 </body>
 </html>
