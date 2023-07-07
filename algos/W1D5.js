@@ -31,16 +31,22 @@ const expectedC = {
 
 function zipArraysIntoMap(keys, values) {
     //Your code here
+    if (keys.length !== values.length) return false
+    let map = {}
+    for (let i =0; i<keys.length;i++){
+        let key = keys[i];
+        let value = values[i];
+        map[key] = value 
+        // map[key[i]] = value[i] // this is the same as the three lines above
+
+    }
+    return map
+
 }
+
 console.log(zipArraysIntoMap(keys1, vals1)) // expected: { flavor: 'chocolate', size: 10, is_delicious: true } (order may vary)
 console.log(zipArraysIntoMap(keys2, vals2)) // expected: {} 
 console.log(zipArraysIntoMap(keys3, vals3)) // expected: { name: 'Gyarados', number: 130, type: 'water/flying', evolves_from: 'Magikarp' } (order may vary)
-
-
-
-
-
-
 
 
 
