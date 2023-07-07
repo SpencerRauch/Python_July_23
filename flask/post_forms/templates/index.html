@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Time</title>
+</head>
+<body>
+    <form action="/process" method="post">
+        <label for="name">Name of food:</label>
+        <input type="text" name="name" id="name">
+        <label for="region">Region:</label>
+        <input type="text" name="region" id="region">
+        <label for="calories_per_serving">Calories per serving</label>
+        <input type="number" name="calories_per_serving" id="calories_per_serving">
+        <input type="hidden" name="secret_info" value="Secr3t-CoDe">
+        <button>Submit</button>
+    </form>
+</body>
+</html>
