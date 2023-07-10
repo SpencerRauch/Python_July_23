@@ -73,6 +73,7 @@ function oddOccurrencesInArray(nums) {
     //         return parseInt(key);
     //     }
     //   }
+    console.log(table)
     let keys = Object.keys(table) //returns an array of the keys of an object
     for (let i = 0; i < keys.length ; i++){
         if (table[keys[i]] % 2 == 1){
