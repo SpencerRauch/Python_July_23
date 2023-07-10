@@ -5,16 +5,16 @@
 
 const arr1 = ["a", "a", "a"];
 const expected1 = {
-  a: 3,
+    a: 3,
 };
 
 const arr2 = ["a", "b", "a", "c", "Bob", "c", "c", "d"];
 const expected2 = {
-  a: 2,
-  b: 1,
-  c: 3,
-  Bob: 1,
-  d: 1,
+    a: 2,
+    b: 1,
+    c: 3,
+    Bob: 1,
+    d: 1,
 };
 
 const arr3 = [];
@@ -28,14 +28,19 @@ const expected3 = {};
  *  Possible hint: .hasOwnProperty() <- Don't know it? Google it as a group!
  */
 function makeFrequencyTable(arr) {
-  //Your code here
+    let table = {};
+    for (let elem of arr) {
+        table.hasOwnProperty(elem) ? table[elem]++ : table[elem] = 1;
+        //   statement                 code if true  : code if false 
+    }
+    return table;
 }
 
-console.log(makeFrequencyTable(arr1))
+console.log(makeFrequencyTable(arr1));
 console.log("Expected: ", expected1);
-console.log(makeFrequencyTable(arr2))
+console.log(makeFrequencyTable(arr2));
 console.log("Expected: ", expected2);
-console.log(makeFrequencyTable(arr3))
+console.log(makeFrequencyTable(arr3));
 console.log("Expected: ", expected3);
 
 
@@ -62,7 +67,19 @@ const numsD = [5, 2, 6, 2, 3, 1, 6, 3, 2, 5, 2];
 const expectedD = 1;
 
 function oddOccurrencesInArray(nums) {
-  //Your code here
+    let table = makeFrequencyTable(nums);
+    //   for (let key in table){
+    //     if (table[key] % 2 !== 0){
+    //         return parseInt(key);
+    //     }
+    //   }
+    let keys = Object.keys(table) //returns an array of the keys of an object
+    for (let i = 0; i < keys.length ; i++){
+        if (table[keys[i]] % 2 == 1){
+            return parseInt(keys[i])
+        }
+    }
+    return false;
 }
 
 
