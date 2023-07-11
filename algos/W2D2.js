@@ -37,3 +37,18 @@ console.log(stringDedupe(str2));
 console.log(stringDedupe(str3));
 console.log(stringDedupe(str4));
 console.log(stringDedupe(str5));
+
+function stringDedupe(str) {
+    let distinctStr = "";
+    const seen = {};
+
+    // loop backwards to include last occurrence
+    for (let i = str.length - 1; i >= 0; --i) {
+        if (!seen[str[i]]) {
+            distinctStr = str[i] + distinctStr;
+            seen[str[i]] = true;
+        }
+    }
+
+    return distinctStr;
+}
