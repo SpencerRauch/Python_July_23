@@ -26,6 +26,7 @@ const expected5 = "ba" // ab
  * - Space: O(?).
  * @param {string} str A string that may contain duplicates.
  * @returns {string} The given string with any duplicate characters removed.
+ * An object may prove useful here
  */
 function stringDedupe(str) {
     //Your code here
