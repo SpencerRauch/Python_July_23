@@ -85,3 +85,38 @@ function isRotation(s1, s2) {
 console.log(isRotation(strA1, strA2)); // expected: true
 console.log(isRotation(strB1, strB2)); // expected: false
 console.log(isRotation(strC1, strC2)); // expected: false
+
+function rotateStr(str, amnt) {
+    let amnt = amnt % str.length;
+    if (amnt === 0) return str;
+    let charsToFront = "";
+    let theRest = "";
+    for (let i = str.length - amnt; i < str.length; i++) {
+        charsToFront += str[i];
+    }
+    for (let i = 0; i < str.length - amnt; i++) {
+        theRest += str[i];
+    }
+    return charsToFront + theRest;
+}
+
+
+
+function isRotation(s1, s2) {
+    if (s1.length !== s2.length) return false;
+    for (let i = 0; i < s1.length; i++) {
+        if (s1 === rotateStr(s2, i)) return true;
+    }
+    return false;
+}
+
+
+
+
+
+
+function isRotation2(s1, s2) {
+    if (s1.length !== s2.length) return false;
+    let combined = s1 + s1;
+    return combined.includes(s2);
+}
