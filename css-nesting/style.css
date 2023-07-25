@@ -1,0 +1,14 @@
+.wrapper > h3 { color: blue }
+
+.content {
+    background-color: lightblue;
+    padding: 10px;
+}
+
+.content > h3 {
+    color: darkgreen;
+}
+
+.content p {
+    color: red
+}
